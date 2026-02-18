@@ -46,12 +46,11 @@ function main()
     push!(circuit, ("R$(j)_$(0)", "$(j)", "0", Rright))
     push!(circuit, ("P$(j)_$(0)", "$(j)", "0", 2))
 
-    # 素子値の定義
     circuitdefs = Dict(
-        Lj => IctoLj(9.0e-6),  #IctoLjの引数は臨界電流値. それに応じたジョセフソンインダクタンスを返す.
-        Cg => 1.29261e-15,
-        Cc => 27.4195e-15,
-        Cn => 15.6854e-15,
+        Lj => IctoLj(9e-06),
+        Cg => 11.0647e-15,
+        Cc => 14.1185e-15,
+        Cn => 9.44222e-15,
         Cr => 2.5e-12,
         Lr => 130e-12,
         Cj => 369e-15,
@@ -59,10 +58,10 @@ function main()
         Rright => 50.0,
     )
     ws  = 2π * (1.0:0.01:16.0) * 1e9    #ここで周波数(横軸を変更): (開始値:ステップ幅:終了値)
-    wp  = (2π*8.62094e9,)S
-    Ip  = 6.1497e-6
+    wp  = (2π*8.6938e9,)
+    Ip  = 5.5168e-06
     sources = [(mode=(1,), port=1, current=Ip)]
-    Npumpharmonics = (20,)
+    Npumpharmonics       = (20,)
     Nmodulationharmonics = (10,)
 
     # 2. 並列計算の実行
