@@ -44,7 +44,7 @@ int main(int argc, const char *argv[]) {
     cin >> generation_num;
     cout << endl << " genetic times: ";
     cin >> generation_time;
-    cout << endl;
+    cout << endl << endl;
 
     read_jl(ele, jl_source, arg_arr[1]);
     calculation(ele, jl_source);
