@@ -89,7 +89,7 @@ struct josephson_problem_Ip {
 //======================================
 // run_nsga2_pagmo_Ip ：Pagmo を使った NSGA‐II 実行 (Ip のみ追加版)
 //======================================
-void run_nsga2_pagmo_Ip(int pop_size,
+void run_nsga2_pagmo_without_wp(int pop_size,
                         int generations,
                         const std::vector<ele_unit>& ele,
                         const std::vector<std::string>& jl_source,

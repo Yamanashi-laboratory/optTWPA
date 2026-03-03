@@ -65,9 +65,9 @@ double change_Lj(double Lj);
 void run_nsga2(int pop_size,int generations, const std::vector<ele_unit>& ele, const std::vector<std::string>& jl_source, double Lj, double Cg_min, double Cg_max, double Cc_min, double Cc_max);
 void run_nsga2_par(int pop_size,int generations, std::vector<ele_unit> ele, std::vector<std::string> jl_source, double Lj, double Cg_min, double Cg_max, double Cc_min, double Cc_max);
 void run_nsga2_pagmo(int pop_size, int generations, const std::vector<ele_unit>& ele, const std::vector<std::string>& jl_source, double Lj, double Cg_min, double Cg_max, double Cc_min, double Cc_max, double Ip_min, double Ip_max, double wp_min, double wp_max);
-void run_nsga2_pagmo_Ip(int pop_size, int generations, const std::vector<ele_unit>& ele, const std::vector<std::string>& jl_source, double Lj, double Cg_min, double Cg_max, double Cc_min, double Cc_max, double Ip_min, double Ip_max);
-void run_nsga2_pagmo_without(int pop_size, int generations, const std::vector<ele_unit>& ele, const std::vector<std::string>& jl_source, double Lj, double Cg_min, double Cg_max, double Cc_min, double Cc_max);
-
+void run_nsga2_pagmo_without_wp(int pop_size, int generations, const std::vector<ele_unit>& ele, const std::vector<std::string>& jl_source, double Lj, double Cg_min, double Cg_max, double Cc_min, double Cc_max, double Ip_min, double Ip_max);
+void run_nsga2_pagmo_without_Ipwp(int pop_size, int generations, const std::vector<ele_unit>& ele, const std::vector<std::string>& jl_source, double Lj, double Cg_min, double Cg_max, double Cc_min, double Cc_max);
+void run_nsga2_pagmo_without_C(int pop_size, int generations, const std::vector<ele_unit>& ele, const std::vector<std::string>& jl_source, double Lj, double Ip_min, double Ip_max, double wp_min, double wp_max);
 
 
 

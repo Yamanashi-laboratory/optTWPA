@@ -86,7 +86,7 @@ struct josephson_problem_without {
 //======================================
 // run_nsga2_pagmo_without ：Pagmo を使った NSGA‐II 実行 (追加前版)
 //======================================
-void run_nsga2_pagmo_without(int pop_size,
+void run_nsga2_pagmo_without_Ipwp(int pop_size,
                              int generations,
                              const std::vector<ele_unit>& ele,
                              const std::vector<std::string>& jl_source,
