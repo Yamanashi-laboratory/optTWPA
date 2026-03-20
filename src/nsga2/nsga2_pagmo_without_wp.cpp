@@ -113,7 +113,7 @@ void run_nsga2_pagmo_without_wp(int pop_size,
     pagmo::population pop{prob, static_cast<unsigned int>(pop_size)};
     pop = algo.evolve(pop);
 
-    std::ofstream ofs("nsga2_result_Ip.csv");
+    std::ofstream ofs("nsga2_result.csv");
     ofs << "Cg,Cc,Cn,Ip,gain,bandwidth,ripple\n";
 
     std::cout << "# Cg\tCc\tCn\tIp\tgain\tbandwidth\tripple\n";
