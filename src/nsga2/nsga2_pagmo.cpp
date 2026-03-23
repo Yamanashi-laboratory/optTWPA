@@ -65,7 +65,7 @@ struct josephson_problem {
         if (r.ripple > ripple_rest) {
             f1 = 1e6 + r.ripple;
             f2 = 1e6 + r.ripple;
-        }
+        }        
         return {f1, f2};
     }
 
