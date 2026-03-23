@@ -4,6 +4,8 @@
 constexpr double WIDTH_F = 1.5;
 constexpr double WIDTH_FR = 1.0;
 constexpr double PHI_0 = 2.067833848e-15;
+constexpr double ripple_rest = 0.1;
+
 
 extern double gain_th;
 

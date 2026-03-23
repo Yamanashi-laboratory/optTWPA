@@ -53,7 +53,7 @@ struct josephson_problem_without_C {
         result r = eval(x[0], x[1]);
         double f1 = -r.gain;
         double f2 = -r.bandwidth;
-        if (r.ripple > 0.1) {
+        if (r.ripple > ripple_rest) {
             f1 = 1e6 + r.ripple;
             f2 = 1e6 + r.ripple;
         }
@@ -111,7 +111,7 @@ void run_nsga2_pagmo_without_C(int pop_size,
         double Ip = xv[0];
         double wp = xv[1];
         result r = prob_udp.eval(Ip, wp);
-        if (r.ripple <= 0.1) {
+        if (r.ripple <ripple_rest) {
             std::cout << Ip << "\t"
                       << wp << "\t"
                       << r.gain << "\t"

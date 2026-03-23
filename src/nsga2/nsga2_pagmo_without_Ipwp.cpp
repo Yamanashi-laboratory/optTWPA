@@ -59,7 +59,7 @@ struct josephson_problem_without {
         result r = eval(x[0], x[1]);
         double f1 = -r.gain;
         double f2 = -r.bandwidth;
-        if (r.ripple > 0.1) {
+        if (r.ripple > ripple_rest) {
             f1 = 1e6 + r.ripple;
             f2 = 1e6 + r.ripple;
         }
@@ -120,7 +120,7 @@ void run_nsga2_pagmo_without_Ipwp(int pop_size,
         result r = prob_udp.eval(Cg, Cc);
         double denom = 3.0 * change_Lj(Lj) / (49.0 * 49.0);
         double Cn = denom - 2.0 * Cg - Cc;
-        if (r.ripple <= 0.1 && Cn > 0.0) {
+        if (r.ripple <= ripple_rest && Cn > 0.0) {
             std::cout << Cg << "\t"
                       << Cc << "\t"
                       << Cn << "\t"
