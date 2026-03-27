@@ -61,9 +61,13 @@ int main(int argc, const char *argv[]) {
 
     switch(menu){
         case 1: run_nsga2_pagmo(generation_num, generation_time, ele, jl_source, out_value(ele, "Lj"), 1e-17, 1e-13, 1e-17, 1e-13, 5e-6, 6e-6, 8e9, 9e9);  //C, Ip, wp
+                break;
         case 2: run_nsga2_pagmo_without_wp(generation_num, generation_time, ele, jl_source, out_value(ele, "Lj"), 1e-17, 1e-13, 1e-17, 1e-13, 5e-6, 6e-6);  //C, Ip
+                break;
         case 3: run_nsga2_pagmo_without_Ipwp(generation_num, generation_time, ele, jl_source, out_value(ele, "Lj"), 1e-17, 1e-13, 1e-17, 1e-13);  //C
+                break;
         case 4: run_nsga2_pagmo_without_C(generation_num, generation_time, ele, jl_source, out_value(ele, "Lj"), 5e-6, 6e-6, 8e9, 9e9);  //Ip, wp
+                break;
         default: return 0;
     }
 
